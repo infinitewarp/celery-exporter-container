@@ -5,7 +5,7 @@ EXPOSE 9808 8000
 WORKDIR /opt/celery-exporter
 RUN rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm \
     && microdnf update \
-    && microdnf install -y gzip jq tar \
+    && microdnf install -y gzip jq procps-ng tar \
     && microdnf clean all
 
 RUN microdnf install -y python39 python39-pip \
