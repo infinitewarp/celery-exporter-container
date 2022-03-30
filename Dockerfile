@@ -14,7 +14,7 @@ RUN microdnf install -y python39 python39-pip \
     && pip install -U pip \
     && pip install poetry
 
-RUN curl https://codeload.github.com/abellotti/celery-exporter/tar.gz/refs/tags/v1.0.2 --output celery-exporter.tar.gz \
+RUN curl -L https://github.com/abellotti/celery-exporter/archive/refs/tags/v1.0.3.tar.gz --output celery-exporter.tar.gz \
     && tar -xf celery-exporter.tar.gz --strip-components=1 \
     && rm -f celery-exporter.tar.gz \
     && poetry config virtualenvs.create false && poetry install --no-interaction
