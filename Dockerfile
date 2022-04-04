@@ -5,10 +5,18 @@ EXPOSE 9808 8000
 WORKDIR /opt/celery-exporter
 RUN rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm \
     && microdnf update \
-    && microdnf install -y gcc git gzip jq procps-ng tar \
-    && microdnf clean all
-
-RUN microdnf install -y libcurl-devel python39 python39-devel python39-pip \
+    && microdnf install -y \
+        gcc \
+        git \
+        gzip \
+        jq \
+        libcurl-devel \
+        procps-ng \
+        python39 \
+        python39-devel \
+        python39-pip \
+        tar \
+    && microdnf clean all \
     && if [[ ! -e /usr/bin/python ]]; then ln -sf /usr/bin/python3.9 /usr/bin/python; fi \
     && if [[ ! -e /usr/bin/pip ]]; then ln -s /usr/bin/pip3.9 /usr/bin/pip; fi \
     && pip install -U pip \
