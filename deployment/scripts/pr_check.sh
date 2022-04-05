@@ -3,7 +3,7 @@
 # Clowder Config
 export APP_NAME="cloudigrade"  # name of app-sre "application" folder this component lives in
 export COMPONENT_NAME="cloudigrade"  # name of app-sre "resourceTemplate" in deploy.yaml for this component
-export IMAGE="quay.io/cloudiservices/celery-exporter" # the image location on quay
+export IMAGE="quay.io/cloudiservices/celery-exporter-container" # the image location on quay
 export DEPLOY_TIMEOUT="420"  # give components a bit more time to deploy
 
 # Install bonfire repo/initialize

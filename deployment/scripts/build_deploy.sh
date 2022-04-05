@@ -1,6 +1,6 @@
 #!/bin/bash
 
-IMAGE_NAME="quay.io/cloudservices/celery-exporter"
+IMAGE_NAME="quay.io/cloudservices/celery-exporter-container"
 IMAGE_TAG=$(git rev-parse --short=7 HEAD)
 DOCKER_CONF="${PWD}/.docker"
 
